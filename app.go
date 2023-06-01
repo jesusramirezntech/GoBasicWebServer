@@ -34,12 +34,13 @@ func main() {
 	fileServer := http.FileServer(http.Dir("./static"))
     http.Handle("/", fileServer)
 
-	fmt.Println("Starting Web Server at port 3000...")
+	fmt.Println("Starting Web Server at port 80...")
 
 	http.HandleFunc("/hello", hiHandler)
 
-	http.HandleFunc("/otherport", HomeEndpoint)
-	if err := http.ListenAndServe(":3000", nil); err != nil {
+	http.HandleFunc("/home", HomeEndpoint)
+
+	if err := http.ListenAndServe(":80", nil); err != nil {
 		log.Fatal(err)
 	}
 }
