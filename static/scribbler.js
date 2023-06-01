@@ -18,7 +18,7 @@ if (document.getElementsByClassName('demo').length > 0) {
             ###This static page is served with GO
 
             - /hello route there is a service saying HI
-            - /:3000 there is another service redirecting to home point
+            - /otherport:3000 there is another service redirecting to home point
             - This server is mounted on a EC2 AWS instance ;)
             `;
   var speed = 60;

@@ -38,7 +38,7 @@ func main() {
 
 	http.HandleFunc("/hello", hiHandler)
 
-	http.HandleFunc("/", HomeEndpoint)
+	http.HandleFunc("/otherport", HomeEndpoint)
 	if err := http.ListenAndServe(":3000", nil); err != nil {
 		log.Fatal(err)
 	}
